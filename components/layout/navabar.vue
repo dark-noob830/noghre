@@ -5,11 +5,11 @@
             <header class="header_section">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg custom_nav-container">
-                        <NuxtLink class="navbar-brand" to="/">
+                        <a class="navbar-brand" href="index.html">
                             <span>
                                 webprog.io
                             </span>
-                        </NuxtLink>
+                        </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -19,38 +19,29 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto">
-                                <li class="nav-item" :class="{ active: $route.path === '/' }">
-                                    <NuxtLink class="nav-link" to="/">صفحه اصلی</NuxtLink>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">صفحه اصلی</a>
                                 </li>
-
-                                <li class="nav-item" :class="{ active: $route.path === '/menu' }">
-                                    <NuxtLink class="nav-link" to="/menu">منو</NuxtLink>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="menu.html">منو</a>
                                 </li>
-
-                                <li class="nav-item" :class="{ active: $route.path === '/about-us' }">
-                                    <NuxtLink class="nav-link" to="/about-us">درباره ما</NuxtLink>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">درباره ما</a>
                                 </li>
-
-                                <li class="nav-item" :class="{ active: $route.path === '/contact-us' }">
-                                    <NuxtLink class="nav-link" to="/contact-us">تماس باما</NuxtLink>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">تماس باما</a>
                                 </li>
                             </ul>
                             <div class="user_option">
-                                <NuxtLink class="cart_link position-relative" to="/cart">
+                                <a class="cart_link position-relative" href="cart.html">
                                     <i class="bi bi-cart-fill text-white fs-5"></i>
-                                    <ClientOnly>
-                                        <span v-if="countCartItems > 0"
-                                            class="position-absolute top-0 translate-middle badge rounded-pill">
-                                            {{ countCartItems }}
-                                        </span>
-                                    </ClientOnly>
-                                </NuxtLink>
-                                <NuxtLink v-if="authUser" to="/profile" class="btn-auth">
-                                    پروفایل
-                                </NuxtLink>
-                                <NuxtLink v-else to="/auth/login" class="btn-auth">
+                                    <span class="position-absolute top-0 translate-middle badge rounded-pill">
+                                        3
+                                    </span>
+                                </a>
+                                <a href="login.html" class="btn-auth">
                                     ورود
-                                </NuxtLink>
+                                </a>
                             </div>
                         </div>
                     </nav>

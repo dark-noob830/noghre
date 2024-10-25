@@ -3,6 +3,6 @@
         <LayoutNavabar />
 
         <slot />
-
+        <LayoutFooter />
     </div>
 </template>

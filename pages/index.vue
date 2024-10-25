@@ -1,7 +1,8 @@
 <template>
     <div>
         <HomeVideo />
-        <!-- <HomeCard /> -->
+        <HomeCard />
+        <HomeBox />
     </div>
 </template>
 

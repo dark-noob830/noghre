@@ -1,7 +1,7 @@
 <template>
     <section class="slider_section">
         <div class="bg-box ">
-            <img src="/images/color.webp" alt="">
+            <img src="/images/img2.jpg" class="h-100" alt="">
 
             <!-- <video autoplay muted loop>
                     <source src="/video3.mp4" type="video/mp4">
