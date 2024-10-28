@@ -1,63 +1,167 @@
 <template>
-    <div class="sub_page">
-        <div class="hero_area">
-            <!-- header section strats -->
-            <header class="header_section">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg custom_nav-container">
-                        <a class="navbar-brand" href="index.html">
-                            <span>
-                                webprog.io
-                            </span>
-                        </a>
+    <div class="navi">
+        <p @click="open_nav()" class="open-nav ">
+            menu
+        </p>
+        <div ref="nava" class="nav-back">
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+            <div class="logo_name">
+                <h1>
+                    sequia jewelry
+                </h1>
+                <p @click="close_nav()" class="close-nav">
+                    close
+                </p>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mx-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">صفحه اصلی</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="menu.html">منو</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">درباره ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">تماس باما</a>
-                                </li>
-                            </ul>
-                            <div class="user_option">
-                                <a class="cart_link position-relative" href="cart.html">
-                                    <i class="bi bi-cart-fill text-white fs-5"></i>
-                                    <span class="position-absolute top-0 translate-middle badge rounded-pill">
-                                        3
-                                    </span>
-                                </a>
-                                <a href="login.html" class="btn-auth">
-                                    ورود
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </header>
-            <!-- end header section -->
+            </div>
+            <div class="navbvar-link">
+                <nuxt-link to="/">پروفایل من </nuxt-link>
+                <nuxt-link to="/"> فروشگاه </nuxt-link>
+                <nuxt-link to="/"> سرمایه گذاری </nuxt-link>
+                <nuxt-link to="/"> درباره ما </nuxt-link>
+                <nuxt-link to="/"> تماس با ما </nuxt-link>
+            </div>
+        </div>
+
+
+        <div class="nav-text">
+            <h2>silver for every day</h2>
+            <button>
+                محصولات
+            </button>
         </div>
     </div>
 </template>
 
-//
 <script setup>
-// import { useCartStore } from "../../store/cart"
+import { ref } from 'vue'
+const nava = ref(null)
+const open_nav = () => {
+    nava.value.classList.add('show-nav')
+    console.log(nava.value.classList)
+    console.log(nava)
+}
+const close_nav = () => {
+    nava.value.classList.remove('show-nav')
+    console.log(nava.value.classList)
+    console.log(nava)
+}
+</script>
 
-// const { authUser } = useAuth()
-// const cart = useCartStore();
-// const countCartItems = computed(() => cart.count)
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-// </script>
+.navi {
+    position: absolute;
+    height: 110vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+}
+
+.nav-back {
+    background: #a8a8a854;
+    /* background-image: url('/images/color.webp'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background: whitesmoke;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    transition-duration: 500ms;
+    transform: translateX(100%);
+}
+
+.show-nav {
+    transform: translateX(0%);
+}
+
+.logo_name {
+    text-align: center;
+
+}
+
+
+
+.logo_name h1 {
+    font-size: 4rem;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    /* font-style: italic; */
+    text-transform: capitalize;
+    display: none;
+}
+
+
+
+.navbvar-link a {
+    text-align: right;
+    display: block;
+    border-bottom: solid 2px #a8a8a82f;
+    font-size: 23px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.nav-text {
+
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    z-index: -1;
+}
+
+.nav-text button {
+    margin-top: 20px;
+    padding: 6px 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.7);
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-back {
+        background: rgba(245, 245, 245, 0.1);
+        width: 30vw;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .nav-back {
+        width: 100vw;
+        height: auto;
+        transform: translateX(0);
+    }
+
+    .logo_name h1 {
+        display: block;
+    }
+
+    .navbvar-link {
+        display: inline-block !important;
+    }
+
+    .navbvar-link a {
+        display: inline-block !important;
+    }
+
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+
+    .nav-text {
+        z-index: 2;
+    }
+}
+</style>
