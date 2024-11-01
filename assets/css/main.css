@@ -1,17 +1,32 @@
-@import 'bootstrap/dist/css/bootstrap.rtl.min.css';
+@import "bootstrap/dist/css/bootstrap.rtl.min.css";
 
 @font-face {
-    font-family: "Vazir";
-    src: url(../fonts/Vazir.eot);
-    /* IE9 Compat Modes */
-    src: url(../fonts/Vazir.eot) format("embedded-opentype"),
-        url(../fonts/Vazir.woff2) format("woff2"),
-        url(../fonts/Vazir.woff) format("woff"),
-        url(../fonts/Vazir.ttf) format("truetype");
-    /* Safari, Android, iOS */
+  font-family: "Vazir";
+  src: url(../fonts/Vazir.eot);
+  /* IE9 Compat Modes */
+  src: url(../fonts/Vazir.eot) format("embedded-opentype"),
+    url(../fonts/Vazir.woff2) format("woff2"),
+    url(../fonts/Vazir.woff) format("woff"),
+    url(../fonts/Vazir.ttf) format("truetype");
+  /* Safari, Android, iOS */
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.button {
+  margin-top: 20px;
+  padding: 6px 40px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0.7);
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+  }
+}
+img {
+  width: 100%;
+  border-radius: 10px;
 }

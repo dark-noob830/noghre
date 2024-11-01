@@ -3,30 +3,36 @@
         <p @click="open_nav()" class="open-nav ">
             menu
         </p>
-        <div ref="nava" class="nav-back">
+        <section ref="nava" class="nav-back">
 
-            <div class="logo_name">
+            <article class="logo">
                 <h1>
-                    sequia jewelry
+                    <span class="logo-title">sequia jewelry</span>
+                    <img class="logo-icon" src="/images/logo.png" alt="">
                 </h1>
                 <p @click="close_nav()" class="close-nav">
                     close
                 </p>
 
-            </div>
-            <div class="navbvar-link">
+
+
+
+            </article>
+            <article class="navbvar-link">
                 <nuxt-link to="/">پروفایل من </nuxt-link>
                 <nuxt-link to="/"> فروشگاه </nuxt-link>
                 <nuxt-link to="/"> سرمایه گذاری </nuxt-link>
                 <nuxt-link to="/"> درباره ما </nuxt-link>
                 <nuxt-link to="/"> تماس با ما </nuxt-link>
-            </div>
-        </div>
+            </article>
+
+        </section>
+
 
 
         <div class="nav-text">
             <h2>silver for every day</h2>
-            <button>
+            <button class="button">
                 محصولات
             </button>
         </div>
@@ -78,15 +84,15 @@ const close_nav = () => {
     transform: translateX(0%);
 }
 
-.logo_name {
+.logo-title {
     text-align: center;
-
+    padding: 100px;
 }
 
 
 
-.logo_name h1 {
-    font-size: 4rem;
+.logo h1 {
+    /* font-size: 4rem; */
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
     /* font-style: italic; */
@@ -103,7 +109,7 @@ const close_nav = () => {
     font-size: 23px;
     text-decoration: none;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     color: rgb(0, 0, 0);
 }
 
@@ -117,33 +123,31 @@ const close_nav = () => {
     z-index: -1;
 }
 
-.nav-text button {
-    margin-top: 20px;
-    padding: 6px 40px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255, 0.7);
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.85);
-        color: white;
-    }
+.logo-icon {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
     .nav-back {
-        background: rgba(245, 245, 245, 0.1);
+        /* background-color: rgba(255, 255, 255, 0.45); */
         width: 30vw;
     }
 }
 
 @media screen and (min-width: 1020px) {
+
     .nav-back {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: baseline;
         width: 100vw;
         height: auto;
+        padding: 10px 30px;
         transform: translateX(0);
     }
 
-    .logo_name h1 {
+    .logo h1 {
         display: block;
     }
 
@@ -162,6 +166,12 @@ const close_nav = () => {
 
     .nav-text {
         z-index: 2;
+    }
+
+    .logo-icon {
+        display: inline-block;
+        width: 6rem;
+        object-fit: cover;
     }
 }
 </style>

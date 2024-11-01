@@ -1,6 +1,7 @@
 <template>
     <div>
         <HomeNewProduct />
+        <HomeShop />
     </div>
 </template>
 

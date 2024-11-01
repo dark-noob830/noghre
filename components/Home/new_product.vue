@@ -1,16 +1,17 @@
 <template>
     <div class="text-center">
-        <video autoplay loop muted>
-            <source src="/home_video.mp4" type="video/mp4">
-        </video>
-        <h2 class="m-auto">
+        <div>
+            <video autoplay loop muted>
+                <source src="/home_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h2 class="product-title">
             محصولات جدید
         </h2>
         <div class="new-product">
-
-            <UtilsCard image="/images/image2.webp" title="انگشتر" description="سلام بیا بخر" />
-            <UtilsCard image="/images/image2.webp" title="انگشتر" description="سلام بیا بخر" />
-            <UtilsCard image="/images/image2.webp" title="انگشتر" description="سلام بیا بخر" />
+            <UtilsCard class="product-card" image="/images/image2.webp" title="انگشتر" description="سلام بیا بخر" />
+            <UtilsCard class="product-card" image="/images/image2.webp" title="دستبند" description="سلام بیا بخر" />
+            <UtilsCard class="product-card" image="/images/image2.webp" title="حلقه" description="سلام بیا بخر" />
         </div>
     </div>
 </template>
@@ -20,6 +21,13 @@
 </script>
 
 <style scoped>
+.text-center {
+    z-index: -1;
+    background: #f0eee4;
+    /* height: 200vh; */
+
+}
+
 video {
     width: 100vw;
     height: 100vh;
@@ -27,35 +35,55 @@ video {
     position: relative;
     left: 0;
     right: 0;
-    top: 0;
+    /* top: 100px; */
     bottom: 0;
-    z-index: -10;
-    opacity: 0.9;
 }
 
-.text-center h2 {
 
-    background: #f0eee4;
-
+.product-title {
+    margin: 8rem auto 2rem auto;
 }
 
 .new-product {
-    display: grid;
+    height: 570px;
+    display: flex;
+    width: 17rem;
+    margin: 2rem auto;
+    overflow-x: scroll;
+    gap: 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: unset;
     background: #f0eee4;
     padding: 25px;
 }
 
-@media screen and (min-width: 768px) {
-    .new-product {
-        grid-template-columns: 50% 50%;
 
-    }
+.new-product::-webkit-scrollbar {
+    height: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px grey;
+
 }
 
-@media screen and (min-width: 1020px) {
-    .new-product {
-        grid-template-columns: 1fr 1fr 1fr;
+.new-product::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+}
 
+
+
+
+@media screen and (min-width: 992px) {
+    video {
+        top: 120px;
+    }
+
+    .new-product {
+        justify-content: space-between;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1200px;
     }
 }
 </style>

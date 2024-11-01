@@ -1,7 +1,8 @@
 <template>
     <div>
-        <div class="card m-auto" style="width: 18rem;">
+        <div class="card m-auto" style="width: 15rem;">
             <img :src="props.image" class="card-img-top" alt="...">
+            <img src="/images/zan.webp" class="image2" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ props.title }}</h5>
                 <p class="card-text">{{ props.description }}</p>
@@ -18,22 +19,30 @@ const props = defineProps(['title', 'description', 'image'])
 
 <style scoped>
 .card {
+    position: relative;
     border-radius: 20px;
+    scroll-snap-align: center;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+    transition: all 0.2s linear;
+}
+
+.card:hover {
+    /* box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.4); */
+}
+
+.image2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
 }
 
 .card-img-top {
     border-radius: 20px;
 }
 
-.button {
-    margin-top: 20px;
-    padding: 6px 40px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255, 0.7);
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.85);
-        color: white;
-    }
+.card:hover .image2 {
+    opacity: 1;
 }
 </style>

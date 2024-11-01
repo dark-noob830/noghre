@@ -3,6 +3,7 @@ import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
       'HomeNewProduct': typeof import("../components/Home/new_product.vue")['default']
+    'HomeShop': typeof import("../components/Home/shop.vue")['default']
     'LayoutFooter': typeof import("../components/layout/footer.vue")['default']
     'LayoutNavabar': typeof import("../components/layout/navabar.vue")['default']
     'UtilsCard': typeof import("../components/utils/Card.vue")['default']
@@ -30,6 +31,7 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyHomeNewProduct': typeof import("../components/Home/new_product.vue")['default']
+    'LazyHomeShop': typeof import("../components/Home/shop.vue")['default']
     'LazyLayoutFooter': typeof import("../components/layout/footer.vue")['default']
     'LazyLayoutNavabar': typeof import("../components/layout/navabar.vue")['default']
     'LazyUtilsCard': typeof import("../components/utils/Card.vue")['default']
@@ -63,6 +65,7 @@ declare module 'vue' {
 }
 
 export const HomeNewProduct: typeof import("../components/Home/new_product.vue")['default']
+export const HomeShop: typeof import("../components/Home/shop.vue")['default']
 export const LayoutFooter: typeof import("../components/layout/footer.vue")['default']
 export const LayoutNavabar: typeof import("../components/layout/navabar.vue")['default']
 export const UtilsCard: typeof import("../components/utils/Card.vue")['default']
@@ -90,6 +93,7 @@ export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyHomeNewProduct: typeof import("../components/Home/new_product.vue")['default']
+export const LazyHomeShop: typeof import("../components/Home/shop.vue")['default']
 export const LazyLayoutFooter: typeof import("../components/layout/footer.vue")['default']
 export const LazyLayoutNavabar: typeof import("../components/layout/navabar.vue")['default']
 export const LazyUtilsCard: typeof import("../components/utils/Card.vue")['default']
