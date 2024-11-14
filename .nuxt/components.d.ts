@@ -4,6 +4,8 @@ type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refre
 interface _GlobalComponents {
       'HomeNewProduct': typeof import("../components/Home/new_product.vue")['default']
     'HomeShop': typeof import("../components/Home/shop.vue")['default']
+    'AboutUs': typeof import("../co../components/contact_us.vuet']
+    'ContactUs': typeof import("../components/contact_us.vue")['default']
     'LayoutFooter': typeof import("../components/layout/footer.vue")['default']
     'LayoutNavabar': typeof import("../components/layout/navabar.vue")['default']
     'UtilsCard': typeof import("../components/utils/Card.vue")['default']
@@ -32,6 +34,8 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyHomeNewProduct': typeof import("../components/Home/new_product.vue")['default']
     'LazyHomeShop': typeof import("../components/Home/shop.vue")['default']
+    'LazyAboutUs': typeof import("../co../components/contact_us.vuet']
+    'LazyContactUs': typeof import("../components/contact_us.vue")['default']
     'LazyLayoutFooter': typeof import("../components/layout/footer.vue")['default']
     'LazyLayoutNavabar': typeof import("../components/layout/navabar.vue")['default']
     'LazyUtilsCard': typeof import("../components/utils/Card.vue")['default']
@@ -66,6 +70,8 @@ declare module 'vue' {
 
 export const HomeNewProduct: typeof import("../components/Home/new_product.vue")['default']
 export const HomeShop: typeof import("../components/Home/shop.vue")['default']
+export const AboutUs: typeof import("../co../components/contact_us.vuet']
+export const ContactUs: typeof import("../components/contact_us.vue")['default']
 export const LayoutFooter: typeof import("../components/layout/footer.vue")['default']
 export const LayoutNavabar: typeof import("../components/layout/navabar.vue")['default']
 export const UtilsCard: typeof import("../components/utils/Card.vue")['default']
@@ -94,6 +100,8 @@ export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyHomeNewProduct: typeof import("../components/Home/new_product.vue")['default']
 export const LazyHomeShop: typeof import("../components/Home/shop.vue")['default']
+export const LazyAboutUs: typeof import("../co../components/contact_us.vuet']
+export const LazyContactUs: typeof import("../components/contact_us.vue")['default']
 export const LazyLayoutFooter: typeof import("../components/layout/footer.vue")['default']
 export const LazyLayoutNavabar: typeof import("../components/layout/navabar.vue")['default']
 export const LazyUtilsCard: typeof import("../components/utils/Card.vue")['default']

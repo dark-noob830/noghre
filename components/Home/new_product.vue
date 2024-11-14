@@ -1,9 +1,16 @@
 <template>
     <div class="text-center">
         <div>
+            
             <video autoplay loop muted>
                 <source src="/home_video.mp4" type="video/mp4">
             </video>
+        </div>
+        <div class="nav-text">
+            <h2>silver for every day</h2>
+            <button class="button">
+                محصولات
+            </button>
         </div>
         <h2 class="product-title">
             محصولات جدید
@@ -39,6 +46,15 @@ video {
     bottom: 0;
 }
 
+.nav-text {
+
+position: absolute;
+bottom: 100px;
+left: 100px;
+text-transform: uppercase;
+letter-spacing: 4px;
+z-index: 1;
+}
 
 .product-title {
     margin: 8rem auto 2rem auto;

@@ -22,20 +22,11 @@
                 <nuxt-link to="/">پروفایل من </nuxt-link>
                 <nuxt-link to="/"> فروشگاه </nuxt-link>
                 <nuxt-link to="/"> سرمایه گذاری </nuxt-link>
-                <nuxt-link to="/"> درباره ما </nuxt-link>
-                <nuxt-link to="/"> تماس با ما </nuxt-link>
+                <nuxt-link to="/about_us"> درباره ما </nuxt-link>
+                <nuxt-link to="/contact_us"> تماس با ما </nuxt-link>
             </article>
 
         </section>
-
-
-
-        <div class="nav-text">
-            <h2>silver for every day</h2>
-            <button class="button">
-                محصولات
-            </button>
-        </div>
     </div>
 </template>
 
@@ -54,15 +45,14 @@ const close_nav = () => {
 }
 </script>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .navi {
     position: absolute;
-    height: 110vh;
     width: 100vw;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav-back {
@@ -113,21 +103,18 @@ const close_nav = () => {
     color: rgb(0, 0, 0);
 }
 
-.nav-text {
 
-    position: absolute;
-    bottom: 100px;
-    left: 100px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    z-index: -1;
-}
 
 .logo-icon {
     display: none;
 }
 
 @media screen and (min-width: 768px) {
+    .navi{
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
     .nav-back {
         /* background-color: rgba(255, 255, 255, 0.45); */
         width: 30vw;
