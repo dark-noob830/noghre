@@ -1,8 +1,8 @@
 <template>
     <div class="about_us">
         <section class="service rev">
-            <article class="service-image">
-                <img src="/images/jpg.avif" alt="">
+            <article class="service-image1">
+                <img src="/images/model.jpg" alt="">
                 <button class="button"> follow us</button>
             </article>
             <article class="service-title">
@@ -29,16 +29,16 @@
 
 <style scoped>
 .service-image {
-    width: 90%;
+    width: 34%;
     margin: 0 auto;
     object-fit: cover;
 }
 
-
-.service-title {
-    padding: 2rem;
+.service-image1{
+    width: 34%;
     margin: 0 auto;
-    max-width: 40rem;
+    object-fit: cover;
+    
 }
 
 @media screen and (min-width: 1020px) {
