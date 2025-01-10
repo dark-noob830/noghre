@@ -1,7 +1,7 @@
 <template>
     <div class="navi">
         <p @click="open_nav()" class="open-nav ">
-            menu
+            <i class="bi bi-list fs-1 position-relative"></i>
         </p>
         <section ref="nava" class="nav-back">
 
@@ -11,19 +11,19 @@
                     <img class="logo-icon" src="/images/logo.png" alt="">
                 </h1>
                 <p @click="close_nav()" class="close-nav">
-                    close
+                    <i class="bi bi-x-lg fs-3"></i>
                 </p>
 
 
 
 
             </article>
-            <article class="navbvar-link">
-                <nuxt-link to="/">پروفایل من </nuxt-link>
-                <nuxt-link to="/"> فروشگاه </nuxt-link>
-                <nuxt-link to="/"> سرمایه گذاری </nuxt-link>
-                <nuxt-link to="/about_us"> درباره ما </nuxt-link>
-                <nuxt-link to="/contact_us"> تماس با ما </nuxt-link>
+            <article  class="navbvar-link">
+                <!-- <nuxt-link to="/">پروفایل من </nuxt-link> -->
+                <nuxt-link @click="close_nav()" to="/product"> فروشگاه </nuxt-link>
+                <nuxt-link @click="close_nav()" to="/"> سرمایه گذاری </nuxt-link>
+                <nuxt-link @click="close_nav()" to="/about_us"> درباره ما </nuxt-link>
+                <nuxt-link @click="close_nav()" to="/contact_us"> تماس با ما </nuxt-link>
             </article>
 
         </section>
@@ -90,15 +90,28 @@ const close_nav = () => {
     display: none;
 }
 
-
-
+.open-nav{
+    position: absolute;
+    right: 30px;
+    top:0;
+}
+.close-nav{
+    position: absolute;
+    left: 30px;
+    top:10px;
+    color: rgb(170, 80, 80);
+    /* border: 1px solid black; */
+}
+.navbvar-link{
+    margin-top: 30px;
+}
 .navbvar-link a {
     text-align: right;
     display: block;
     border-bottom: solid 2px #a8a8a82f;
     font-size: 23px;
     text-decoration: none;
-    margin: 10px;
+    margin: 15px;
     padding: 10px;
     color: rgb(0, 0, 0);
 }

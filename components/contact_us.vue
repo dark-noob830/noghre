@@ -2,7 +2,7 @@
     <div class="about_us">
         <section class="service rev">
             <article class="service-image1">
-                <img src="/images/model.jpg" alt="">
+                <img src="/images/home-page-1.jpg" alt="">
                 <button class="button"> follow us</button>
             </article>
             <article class="service-title">

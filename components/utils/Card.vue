@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="card m-auto" style="width: 15rem;">
+        <div class="card m-auto " style="width: 20rem;">
             <img :src="props.image" class="card-img-top" alt="...">
-            <img src="/images/zan.webp" class="image2" alt="...">
+            <img src="/images/home-page-card.webp" class="image2" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ props.title }}</h5>
                 <p class="card-text">{{ props.description }}</p>

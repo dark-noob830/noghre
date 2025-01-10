@@ -31,7 +31,8 @@
 .text-center {
     z-index: -1;
     background: #f0eee4;
-    /* height: 200vh; */
+
+    height: 200vh;
 
 }
 
@@ -63,9 +64,10 @@ z-index: 1;
 .new-product {
     height: 570px;
     display: flex;
-    width: 17rem;
+    width: 20rem;
     margin: 2rem auto;
     overflow-x: scroll;
+    overflow-y: hidden;
     gap: 8px;
     scroll-snap-type: x mandatory;
     scrollbar-width: unset;
@@ -100,6 +102,9 @@ z-index: 1;
         overflow: hidden;
         width: 100%;
         max-width: 1200px;
+    }
+    .product-card{
+        margin-bottom: 20px;
     }
 }
 </style>
