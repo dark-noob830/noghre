@@ -16,9 +16,9 @@
             محصولات جدید
         </h2>
         <div class="new-product">
-            <UtilsCard class="product-card" image="/images/image2.webp" title="انگشتر" description=  'انگشتر' />
-            <UtilsCard class="product-card" image="/images/image2.webp" title="گردن بند سوارسکی" description="گردن بند" />
-            <UtilsCard class="product-card" image="/images/image2.webp" title="زمردی" description=" دستبند زمرد " />
+            <UtilsCard class="product-card" image="/images/image2.webp" title="انگشتر" description=  'انگشتر' price="100"/>
+            <UtilsCard class="product-card" image="/images/image2.webp" title="گردن بند سوارسکی" description="گردن بند" price="200" />
+            <UtilsCard class="product-card" image="/images/image2.webp" title="زمردی" description=" دستبند زمرد " price="300" />
         </div>
     </div>
 </template>
@@ -62,7 +62,7 @@ z-index: 1;
 }
 
 .new-product {
-    height: 570px;
+    height: 620px;
     display: flex;
     width: 20rem;
     margin: 2rem auto;
