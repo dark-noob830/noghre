@@ -1,6 +1,7 @@
 <template>
     <div class="main-product">
       <h1>فروشگاه</h1>
+      <UtilsCard class="product-card" image="/images/image2.webp" :title="product.name" :description=  'product.description' />
       <div v-for="product in products" :key="product.id" class="product">
         <img :src="useRuntimeConfig().public.apiBase+'/' + product.image" alt="Product Image" />
         <h2>نام :{{ product.name }}</h2>

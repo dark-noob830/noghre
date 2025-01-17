@@ -21,7 +21,7 @@
             <article  class="navbvar-link">
                 <!-- <nuxt-link to="/">پروفایل من </nuxt-link> -->
                 <nuxt-link @click="close_nav()" to="/product"> فروشگاه </nuxt-link>
-                <nuxt-link @click="close_nav()" to="/"> سرمایه گذاری </nuxt-link>
+                <nuxt-link @click="close_nav()" to="/invest"> سرمایه گذاری </nuxt-link>
                 <nuxt-link @click="close_nav()" to="/about_us"> درباره ما </nuxt-link>
                 <nuxt-link @click="close_nav()" to="/contact_us"> تماس با ما </nuxt-link>
             </article>
